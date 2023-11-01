@@ -19,7 +19,6 @@ public class PlayerDashState : PlayerState
     public override void Exit()
     {
         base.Exit();
-
         player.SetVelocity(0, rb.velocity.y);
         player.cd.enabled = true;
     }
@@ -30,6 +29,9 @@ public class PlayerDashState : PlayerState
 
         if (!player.IsGroundDetected() && player.IsWallDected())
             stateMachine.ChangeState(player.wallSlide);
+
+        if (player.IsGroundDetected() && player.IsWallDected())
+            stateMachine.ChangeState(player.idleState);
 
         player.SetVelocity(player.dashSpeed * player.dashDir, 0);
 

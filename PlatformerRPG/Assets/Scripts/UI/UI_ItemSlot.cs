@@ -60,11 +60,13 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
         if (item.data.itemType == ItemType.Equipment)
         {
             Inventory.Instance.EquipItem(item.data);
+            ui.itemTooltip.HideToolTip();
         }
 
         else if (item.data.itemType == ItemType.Useable)
         {
             Inventory.Instance.EquipUsableItem(item.data);
+            ui.itemTooltip.HideToolTip();
         }
 
     }
