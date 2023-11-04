@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
     public Dictionary<ItemData, InventoryItem> inventoryDictionary;
 
     public List<InventoryItem> stash;
-    public Dictionary <ItemData, InventoryItem> stashDictionary;
+    public Dictionary<ItemData, InventoryItem> stashDictionary;
 
     public List<InventoryItem> usable;
     public Dictionary<ItemData_Useable, InventoryItem> usableDictionary;
@@ -136,12 +136,12 @@ public class Inventory : MonoBehaviour
 
         if (usableDictionary.TryGetValue(newUsable, out InventoryItem existingItem))
         {
-            existingItem.stackSize += stashDictionary[_item].stackSize; 
+            existingItem.stackSize += stashDictionary[_item].stackSize;
         }
         else
         {
             InventoryItem newItem = new InventoryItem(newUsable);
-            newItem.stackSize = stashDictionary[_item].stackSize; 
+            newItem.stackSize = stashDictionary[_item].stackSize;
             usable.Add(newItem);
             usableDictionary.Add(newUsable, newItem);
         }
@@ -269,7 +269,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(ItemData _item)
     {
-        if(inventoryDictionary.TryGetValue(_item, out InventoryItem value))
+        if (inventoryDictionary.TryGetValue(_item, out InventoryItem value))
         {
             if (value.stackSize <= 1)
             {
@@ -285,10 +285,27 @@ public class Inventory : MonoBehaviour
 
         if (stashDictionary.TryGetValue(_item, out InventoryItem stashValue))
         {
-                stash.Remove(stashValue);
-                stashDictionary.Remove(_item);
+            stash.Remove(stashValue);
+            stashDictionary.Remove(_item);
         }
 
+        UpdateSlotUI();
+    }
+
+    public void RemoveUsableItem(ItemData_Useable _item)
+    {
+        if (usableDictionary.TryGetValue(_item, out InventoryItem usableValue))
+        {
+            if (usableValue.stackSize <= 1)
+            {
+                usable.Remove(usableValue);
+                usableDictionary.Remove(_item);
+            }
+            else
+            {
+                usableValue.RemoveStack();
+            }
+        }
 
         UpdateSlotUI();
     }
@@ -367,7 +384,7 @@ public class Inventory : MonoBehaviour
 
         bool canUseFlaks = Time.time > lastTimeUsedFalsk + flaskCooldown;
 
-        if(canUseFlaks)
+        if (canUseFlaks)
         {
             flaskCooldown = currentFlask.itemCooldown;
             currentFlask.ExcuteItemEffect();
@@ -375,13 +392,37 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void UseQuickSlot()
+    public void UseQuickSlot(int quickSlotNumber)
     {
+        UI_QuickSlot quickSlot = FindQuickSlotByNumber(quickSlotNumber);
 
+        if (quickSlot != null && quickSlot.item != null)
+        {
+            ItemData_Useable usableItem = quickSlot.item.data as ItemData_Useable;
+
+            if (usableItem != null)
+            {
+                usableItem.ExcuteItemEffect();
+                RemoveUsableItem(usableItem);
+            }
+        }
+    }
+
+    private UI_QuickSlot FindQuickSlotByNumber(int quickSlotNumber)
+    {
+        UI_QuickSlot[] quickSlots = quickSlotParent.GetComponentsInChildren<UI_QuickSlot>();
+        foreach (var quickSlot in quickSlots)
+        {
+            if (quickSlot.quickSlotNumber == quickSlotNumber)
+            {
+                return quickSlot;
+            }
+        }
+        return null;
     }
 
     private void Update()
     {
-        
+
     }
 }

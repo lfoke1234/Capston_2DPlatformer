@@ -19,4 +19,5 @@ MonoBehaviour:
   dropChance: 100
   usableItemID: 1
   itemCooldown: 0
-  itemEffects: []
+  itemEffects:
+  - {fileID: 11400000, guid: 1d062296112d6c64b87fa995d61c7290, type: 2}

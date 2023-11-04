@@ -98,7 +98,23 @@ public class Player : Entity
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Inventory.Instance.UseFlask();
+            Inventory.Instance.UseQuickSlot(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Inventory.Instance.UseQuickSlot(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Inventory.Instance.UseQuickSlot(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Inventory.Instance.UseQuickSlot(4);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Inventory.Instance.UseQuickSlot(5);
         }
     }
 
