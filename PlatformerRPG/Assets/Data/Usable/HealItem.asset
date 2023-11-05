@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5009bca2a9d43a4489f9a607a0b6b806, type: 3}
-  m_Name: A
+  m_Name: HealItem
   m_EditorClassIdentifier: 
   itemType: 2
-  itemName: A
-  icon: {fileID: 1909705361, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
-  itemDescription: this is a test item.
+  itemName: b
+  icon: {fileID: 305479155, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  itemDescription: this is a heal item
   dropChance: 100
-  usableItemID: 1
-  itemCooldown: 0
+  usableItemID: 2
+  itemCooldown: 1
   itemEffects:
-  - {fileID: 11400000, guid: 1d062296112d6c64b87fa995d61c7290, type: 2}
+  - {fileID: 11400000, guid: 6cbd7bcf62048ab478bb677e960082a9, type: 2}

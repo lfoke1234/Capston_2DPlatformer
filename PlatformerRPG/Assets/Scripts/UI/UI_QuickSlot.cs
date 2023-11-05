@@ -18,6 +18,7 @@ public class UI_QuickSlot : UI_ItemSlot
         {
             Inventory.Instance.UnequipUsableItem(usableItem);
             Inventory.Instance.AddItemWithStack(usableItem, item.stackSize);
+            ui.itemTooltip.HideToolTip();
         }
     }
 }

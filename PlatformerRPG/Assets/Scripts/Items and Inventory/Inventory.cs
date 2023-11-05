@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -40,6 +42,9 @@ public class Inventory : MonoBehaviour
     private float lastTimeUsedFalsk;
     private float flaskCooldown;
 
+    private float lastTimeUseUsableItem;
+    public float usableItemCooldown { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -71,6 +76,7 @@ public class Inventory : MonoBehaviour
 
         StartingItme();
         StartEquipItem();
+
     }
 
     private void StartingItme()
@@ -396,14 +402,21 @@ public class Inventory : MonoBehaviour
     {
         UI_QuickSlot quickSlot = FindQuickSlotByNumber(quickSlotNumber);
 
-        if (quickSlot != null && quickSlot.item != null)
-        {
-            ItemData_Useable usableItem = quickSlot.item.data as ItemData_Useable;
+        bool canUseItem = Time.time > lastTimeUseUsableItem + usableItemCooldown;
 
-            if (usableItem != null)
+        if (canUseItem)
+        {
+            if (quickSlot != null && quickSlot.item != null)
             {
-                usableItem.ExcuteItemEffect();
-                RemoveUsableItem(usableItem);
+                ItemData_Useable usableItem = quickSlot.item.data as ItemData_Useable;
+
+                if (usableItem != null)
+                {
+                    usableItemCooldown = usableItem.itemCooldown;
+                    usableItem.ExcuteItemEffect();
+                    RemoveUsableItem(usableItem);
+                    lastTimeUseUsableItem = Time.time;
+                }
             }
         }
     }
@@ -419,10 +432,5 @@ public class Inventory : MonoBehaviour
             }
         }
         return null;
-    }
-
-    private void Update()
-    {
-
     }
 }
