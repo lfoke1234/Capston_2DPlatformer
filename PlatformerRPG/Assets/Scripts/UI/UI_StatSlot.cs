@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 
 public class UI_StatSlot : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler
 {
@@ -14,6 +15,12 @@ public class UI_StatSlot : MonoBehaviour,IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private TextMeshProUGUI statNameText;
 
     [SerializeField] private string statDescription;
+
+    [SerializeField] private float xLimit = 960;
+    [SerializeField] private float yLimit = 540;
+    [SerializeField] private float xOffset = 150;
+    [SerializeField] private float yOffset = 150;
+
     private void OnValidate()
     {
         gameObject.name = "Stat -" + statName;
@@ -40,7 +47,23 @@ public class UI_StatSlot : MonoBehaviour,IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Vector2 mousePosition = Input.mousePosition;
+
+        float newXoffset = 0;
+        float newYoffset = 0;
+
+        if (mousePosition.x > xLimit)
+            newXoffset = -xOffset;
+        else
+            newXoffset = xOffset;
+
+        if (mousePosition.y > yLimit)
+            newYoffset = -yOffset;
+        else
+            newYoffset = yOffset;
+
         ui.statTooltip.ShowStatTooltip(statDescription);
+        ui.statTooltip.transform.position = new Vector2(mousePosition.x + newXoffset, mousePosition.y + newYoffset);
     }
 
     public void OnPointerExit(PointerEventData eventData)

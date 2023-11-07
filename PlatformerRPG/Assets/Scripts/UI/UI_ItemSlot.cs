@@ -12,6 +12,11 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     protected UI ui;
     public InventoryItem item;
 
+    [SerializeField] private float xLimit = 960;
+    [SerializeField] private float yLimit = 540;
+    [SerializeField] private float xOffset = 150;
+    [SerializeField] private float yOffset = 150;
+
     private void Start()
     {
         ui = GetComponentInParent<UI>();
@@ -79,21 +84,21 @@ public class UI_ItemSlot : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
         
         Vector2 mousePosition = Input.mousePosition;
 
-        float xOffset = 0;
-        float yOffset = 0;
+        float newXoffset = 0;
+        float newYoffset = 0;
 
-        if (mousePosition.x > 600)
-            xOffset = -150;
+        if (mousePosition.x > xLimit)
+            newXoffset = -xOffset;
         else
-            xOffset = 150;
+            newXoffset = xOffset;
 
-        if (mousePosition.y > 320)
-            yOffset = -150;
+        if (mousePosition.y > yLimit)
+            newYoffset = -yOffset;
         else
-            yOffset = 150;
+            newYoffset = yOffset;
 
         ui.itemTooltip.ShowToolTip(item.data);
-        ui.itemTooltip.transform.position = new Vector2(mousePosition.x + xOffset, mousePosition.y + yOffset);
+        ui.itemTooltip.transform.position = new Vector2(mousePosition.x + newXoffset, mousePosition.y + newYoffset);
     }
 
     public void OnPointerExit(PointerEventData eventData)

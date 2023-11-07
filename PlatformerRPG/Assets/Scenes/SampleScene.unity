@@ -210,6 +210,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   quickSlotNumber: 3
 --- !u!114 &12502604
 MonoBehaviour:
@@ -2532,6 +2536,7 @@ GameObject:
   - component: {fileID: 347389864}
   - component: {fileID: 347389868}
   - component: {fileID: 347389867}
+  - component: {fileID: 347389869}
   m_Layer: 5
   m_Name: Item_Tooltip
   m_TagString: Untagged
@@ -2558,7 +2563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -253}
+  m_AnchoredPosition: {x: 81, y: -218}
   m_SizeDelta: {x: 350, y: 300.32}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &347389864
@@ -2655,6 +2660,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &347389869
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347389862}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &349358637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4069,7 +4086,7 @@ Transform:
   m_GameObject: {fileID: 428981809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.62, y: -0.45, z: 0}
+  m_LocalPosition: {x: 24.75, y: -1.24, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4144,7 +4161,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 50
     modifiers: 
   maxHiddenHealth:
     baseValue: 0
@@ -4176,7 +4193,7 @@ MonoBehaviour:
   poisonedTimer: 0
   chilledTimer: 0
   shockedTimer: 0
-  currentHealth: 140
+  currentHealth: 0
   currentHiddenHealth: 0
   currentStamina: 0
   level: 1
@@ -4802,6 +4819,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   slotType: 1
 --- !u!114 &470443407
 MonoBehaviour:
@@ -6221,6 +6242,10 @@ MonoBehaviour:
   statValueText: {fileID: 640872953}
   statNameText: {fileID: 1477736786}
   statDescription: Player Max Health
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
 --- !u!222 &640872955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7245,6 +7270,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   slotType: 3
 --- !u!114 &768258992
 MonoBehaviour:
@@ -9039,6 +9068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2038914251}
+  currency: 0
 --- !u!4 &914793529
 Transform:
   m_ObjectHideFlags: 0
@@ -9463,6 +9493,51 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8484930361076274401, guid: b5d68e87bc082e84db8fa6cf06985f49, type: 3}
   m_PrefabInstance: {fileID: 1946291726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &945129486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945129488}
+  - component: {fileID: 945129487}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &945129487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945129486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4443055a79c167447b7749f64dde56b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: data.alexdev
+--- !u!4 &945129488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945129486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &956021175
 GameObject:
   m_ObjectHideFlags: 0
@@ -16179,6 +16254,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   quickSlotNumber: 1
 --- !u!1 &1104155473
 GameObject:
@@ -16236,6 +16315,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   quickSlotNumber: 2
 --- !u!114 &1104155476
 MonoBehaviour:
@@ -17013,6 +17096,10 @@ MonoBehaviour:
   statValueText: {fileID: 1191656432}
   statNameText: {fileID: 2032721397}
   statDescription: Player can do damage to enemy by this value
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
 --- !u!222 &1191656434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18084,6 +18171,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   quickSlotNumber: 5
 --- !u!114 &1295575581
 MonoBehaviour:
@@ -27617,6 +27708,10 @@ MonoBehaviour:
   statValueText: {fileID: 1629707180}
   statNameText: {fileID: 1001334366}
   statDescription: Player can do damage to object by this value
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
 --- !u!222 &1629707182
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28126,6 +28221,7 @@ GameObject:
   - component: {fileID: 1678708851}
   - component: {fileID: 1678708850}
   - component: {fileID: 1678708849}
+  - component: {fileID: 1678708853}
   m_Layer: 5
   m_Name: Stat_Tooltip
   m_TagString: Untagged
@@ -28201,9 +28297,21 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -253}
+  m_AnchoredPosition: {x: -273, y: -507}
   m_SizeDelta: {x: 400, y: 160}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!225 &1678708853
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678708848}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1679131740
 GameObject:
   m_ObjectHideFlags: 0
@@ -29316,6 +29424,10 @@ MonoBehaviour:
   statValueText: {fileID: 1735194381}
   statNameText: {fileID: 637916680}
   statDescription: Player Max Stamina
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
 --- !u!222 &1735194383
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29727,6 +29839,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   slotType: 4
 --- !u!114 &1822639209
 MonoBehaviour:
@@ -30524,6 +30640,10 @@ MonoBehaviour:
   statValueText: {fileID: 1900416450}
   statNameText: {fileID: 2127816224}
   statDescription: 'Reduce the damage the player '
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
 --- !u!222 &1900416452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30763,6 +30883,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   quickSlotNumber: 4
 --- !u!114 &1954613491
 MonoBehaviour:
@@ -31043,7 +31167,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 50
     modifiers: 
   maxHiddenHealth:
     baseValue: 0
@@ -31212,7 +31336,7 @@ Transform:
   m_GameObject: {fileID: 1970366452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.26, y: 4.7, z: 0}
+  m_LocalPosition: {x: 40.06, y: 0.58, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -32917,6 +33041,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   slotType: 2
 --- !u!114 &2090410625
 MonoBehaviour:
@@ -33773,6 +33901,10 @@ MonoBehaviour:
   item:
     data: {fileID: 0}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
   slotType: 0
 --- !u!224 &7754907646025170025
 RectTransform:
@@ -33811,6 +33943,10 @@ MonoBehaviour:
   item:
     data: {fileID: 11400000, guid: dbf7ab7b1742a37469a05034f3c74662, type: 2}
     stackSize: 0
+  xLimit: 960
+  yLimit: 540
+  xOffset: 150
+  yOffset: 150
 --- !u!222 &8811597749416915737
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33925,3 +34061,4 @@ SceneRoots:
   - {fileID: 855258303}
   - {fileID: 1054705960}
   - {fileID: 978666721}
+  - {fileID: 945129488}
