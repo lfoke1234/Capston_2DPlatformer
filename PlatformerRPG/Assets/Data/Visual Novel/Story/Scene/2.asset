@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cf0c3032c6eac4a9453ab267dccdaa, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  sentence:
+  sentences:
   - text: What do we want??
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
-  - text: The Queen!!
+  - text: Da Wae!!!
     speaker: {fileID: 11400000, guid: b14c53498dac5c34989830d55938ae46, type: 2}
-  - text: We need the wae....
-    speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
   background: {fileID: 21300000, guid: 99a4a23701ec66e4f993efdcb794e764, type: 3}
   nextScene: {fileID: 11400000, guid: 75b5ff993ce69a347a8159be21d4a274, type: 2}

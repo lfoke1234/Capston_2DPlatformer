@@ -3,12 +3,13 @@ using UnityEngine;
 
 namespace RPG.VisualNovel
 {
-    [CreateAssetMenu(fileName = "NewStoryScene", menuName = "Data/Visual/New Stroy Scene")]
-    public class StoryScene : ScriptableObject
+    [CreateAssetMenu(fileName = "NewStoryScene", menuName = "Data/Visual Novel/New Story Scene")]
+    [System.Serializable]
+    public class StoryScene : GameScene
     {
-        public List<Sentence> sentence;
+        public List<Sentence> sentences;
         public Sprite background;
-        public StoryScene nextScene;
+        public GameScene nextScene;
 
         [System.Serializable]
         public struct Sentence
@@ -17,5 +18,4 @@ namespace RPG.VisualNovel
             public Speaker speaker;
         }
     }
-
 }

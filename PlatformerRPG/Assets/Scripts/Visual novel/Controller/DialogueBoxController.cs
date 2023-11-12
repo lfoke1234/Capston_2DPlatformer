@@ -15,6 +15,8 @@ namespace RPG.VisualNovel
         private int sentenceIndex = 0;
         public StoryScene currentScene;
         private State state = State.Completed;
+        private Animator animator;
+        private bool isHidden = false;
 
 
         private enum State
@@ -22,7 +24,32 @@ namespace RPG.VisualNovel
             Playing,
             Completed,
         }
-        
+
+        private void Start()
+        {
+            animator = GetComponent<Animator>();
+
+        }
+        public void Show()
+        {
+            animator.SetTrigger("Show");
+            isHidden = false;
+        }
+
+        public void Hide()
+        {
+            if (!isHidden)
+            {
+                animator.SetTrigger("Hide");
+                isHidden = true;
+            }
+        }
+
+        public void ClearText()
+        {
+            barText.text = "";
+        }
+
         public void PlayScene(StoryScene scene)
         {
             currentScene = scene;
@@ -32,14 +59,14 @@ namespace RPG.VisualNovel
 
         public void PlayNextSentence()
         {
-            StartCoroutine(TypeText(currentScene.sentence[++sentenceIndex].text));
-            personNameText.text = currentScene.sentence[sentenceIndex].speaker.speakerName;
-            personNameText.color = currentScene.sentence[sentenceIndex].speaker.textColor;
+            StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
+            personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
+            personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
         }
 
         public bool IsLastScentence()
         {
-            return sentenceIndex + 1 == currentScene.sentence.Count;
+            return sentenceIndex + 1 == currentScene.sentences.Count;
         }
 
         public bool IsCompleted()
