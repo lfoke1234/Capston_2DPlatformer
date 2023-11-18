@@ -42,4 +42,16 @@ public class SpriteSwitcher : MonoBehaviour
             image2.sprite = sprite;
         }
     }
+
+    public Sprite GetImage()
+    {
+        if (!isSwitched)
+        {
+            return image1.sprite;
+        }
+        else
+        {
+            return image2.sprite;
+        }
+    }
 }
