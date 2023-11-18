@@ -8,8 +8,8 @@ namespace RPG.VisualNovel
     public class GameController : MonoBehaviour
     {
         public GameScene currentScene;
-        public DialogueBoxController bottomBar;
-        public BackgroundController backgroundController;
+        public BottomBarController bottomBar;
+        public SpriteSwitcher backgroundController;
         public ChooseController chooseController;
 
         private State state = State.IDLE;

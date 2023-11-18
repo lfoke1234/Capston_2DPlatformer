@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace RPG.VisualNovel
 {
-    public class DialogueBoxController : MonoBehaviour
+    public class BottomBarController : MonoBehaviour
     {
         public TextMeshProUGUI barText;
         public TextMeshProUGUI personNameText;

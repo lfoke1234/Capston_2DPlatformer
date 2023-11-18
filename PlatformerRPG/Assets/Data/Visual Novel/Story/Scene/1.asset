@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   sentences:
-  - text: My brother!!
+  - text: Humm... What should I do?
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
-  - text: Da Wae! Da Wae!!
-    speaker: {fileID: 11400000, guid: b14c53498dac5c34989830d55938ae46, type: 2}
-  background: {fileID: 21300000, guid: be8c9daed4a4fed4cbc669e1c42e6de0, type: 3}
-  nextScene: {fileID: 11400000, guid: 08a71084587c9594a8a3e5f92a053b13, type: 2}
+  background: {fileID: 21300000, guid: 7a192068ac277b840b9e0d8c3cb55d30, type: 3}
+  nextScene: {fileID: 11400000, guid: da10389fd3fb533439201cd1391d5004, type: 2}

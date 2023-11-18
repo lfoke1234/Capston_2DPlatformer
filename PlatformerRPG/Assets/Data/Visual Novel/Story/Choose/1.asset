@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   labels:
-  - text: Kill  Her....
-    nextScene: {fileID: 11400000, guid: 7c9fc6f0d4e3a7840a3a05792a874dd9, type: 2}
-  - text: Going back
+  - text: Go walk
     nextScene: {fileID: 11400000, guid: 08a71084587c9594a8a3e5f92a053b13, type: 2}
-  - text: Protect Queen!!!!!!
+  - text: Go cherch
     nextScene: {fileID: 11400000, guid: 75b5ff993ce69a347a8159be21d4a274, type: 2}
+  - text: Do nothing
+    nextScene: {fileID: 11400000, guid: 1454a5dd14d9f81419b48f52f4882161, type: 2}

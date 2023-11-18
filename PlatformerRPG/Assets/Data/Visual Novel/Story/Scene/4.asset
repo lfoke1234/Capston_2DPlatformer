@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70cf0c3032c6eac4a9453ab267dccdaa, type: 3}
-  m_Name: 2
+  m_Name: 4
   m_EditorClassIdentifier: 
   sentences:
-  - text: The weather is good.
+  - text: Today is over...
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
-  - text: take a walk
-    speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
-  - text: ........
-    speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
-  background: {fileID: 21300000, guid: 893615fe4ac1f0347b10aefea38af056, type: 3}
-  nextScene: {fileID: 11400000, guid: 1454a5dd14d9f81419b48f52f4882161, type: 2}
+  background: {fileID: 21300000, guid: 0b62f0d31bb6f024ebb5279d60880126, type: 3}
+  nextScene: {fileID: 0}
