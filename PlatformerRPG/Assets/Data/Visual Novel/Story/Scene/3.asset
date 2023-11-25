@@ -15,7 +15,27 @@ MonoBehaviour:
   sentences:
   - text: Let's pray...
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 400, y: 0}
+      moveSpeed: 0
   - text: ............
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+      spriteIndex: 2
+      actionType: 0
+      coords: {x: 400, y: 0}
+      moveSpeed: 0
+  - text: ............
+    speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+      spriteIndex: 2
+      actionType: 3
+      coords: {x: 400, y: 0}
+      moveSpeed: 0
   background: {fileID: 21300000, guid: d9eba52dc0e33e3499691ce512d10fb2, type: 3}
   nextScene: {fileID: 11400000, guid: 1454a5dd14d9f81419b48f52f4882161, type: 2}

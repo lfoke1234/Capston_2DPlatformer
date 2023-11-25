@@ -15,5 +15,11 @@ MonoBehaviour:
   sentences:
   - text: Today is over...
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+      spriteIndex: 3
+      actionType: 0
+      coords: {x: 400, y: 0}
+      moveSpeed: 0
   background: {fileID: 21300000, guid: 0b62f0d31bb6f024ebb5279d60880126, type: 3}
   nextScene: {fileID: 0}

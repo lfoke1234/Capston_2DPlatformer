@@ -19,7 +19,7 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
       spriteIndex: 0
       actionType: 1
-      coords: {x: 0, y: 400}
+      coords: {x: 400, y: 0}
       moveSpeed: 0
   - text: take a walk
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
@@ -27,8 +27,8 @@ MonoBehaviour:
     - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
       spriteIndex: 0
       actionType: 0
-      coords: {x: 0, y: 400}
-      moveSpeed: 0
+      coords: {x: 400, y: 0}
+      moveSpeed: 1
   - text: ........
     speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
     actions:
