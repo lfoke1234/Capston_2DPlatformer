@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   itemName: Iron
-  icon: {fileID: 1025795234, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  icon: {fileID: 21300000, guid: 3e4fcc84a0ac95b429c56452575f6021, type: 3}
+  itemDescription: 
   dropChance: 100

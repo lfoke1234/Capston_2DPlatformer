@@ -2,6 +2,7 @@ using RPG.VisualNovel;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RPG.VisualNovel
 {
@@ -73,6 +74,11 @@ namespace RPG.VisualNovel
             {
                 state = State.CHOOSE;
                 chooseController.SetupChoose(scene as ChooseScene);
+            }
+            else if (scene is null)
+            {
+                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(currentSceneIndex + 1);
             }
         }
     }

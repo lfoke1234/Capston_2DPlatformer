@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - text: Humm... What should I do?
-    speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
     actions:
-    - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    - speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
       spriteIndex: 0
       actionType: 1
       coords: {x: 400, y: 0}
       moveSpeed: 0
   - text: ....
-    speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
     actions:
-    - speaker: {fileID: 11400000, guid: 31c8ba1049b5f0b4e97a28dfea33eb76, type: 2}
+    - speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
       spriteIndex: 0
       actionType: 3
       coords: {x: 400, y: 0}

@@ -55,6 +55,12 @@ public class Enemy_Skeleton : Enemy
         base.Die();
         stateMachine.ChangeState(deadState);
 
-        
+        StartCoroutine(DestroyAfterDelay(1f));
+    }
+
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
 }
