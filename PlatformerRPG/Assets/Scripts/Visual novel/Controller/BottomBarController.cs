@@ -2,7 +2,6 @@ using RPG.VisualNovel;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 namespace RPG.VisualNovel
@@ -34,6 +33,11 @@ namespace RPG.VisualNovel
 
         private void Start()
         {
+        }
+
+        public int GetSentenceIndex()
+        {
+            return sentenceIndex;
         }
 
         public void Show()

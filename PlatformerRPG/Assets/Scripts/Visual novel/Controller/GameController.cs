@@ -12,6 +12,7 @@ namespace RPG.VisualNovel
         public BottomBarController bottomBar;
         public SpriteSwitcher backgroundController;
         public ChooseController chooseController;
+        public AudioController audioController;
 
         private State state = State.IDLE;
 
@@ -27,6 +28,7 @@ namespace RPG.VisualNovel
                 StoryScene storyScene = currentScene as StoryScene;
                 bottomBar.PlayScene(storyScene);
                 backgroundController.SetImage(storyScene.background);
+                PlayAudio(storyScene.sentences[0]);
             }
         }
 
@@ -43,6 +45,8 @@ namespace RPG.VisualNovel
                     else
                     {
                         bottomBar.PlayNextSentence();
+                        PlayAudio((currentScene as StoryScene)
+                                   .sentences[bottomBar.GetSentenceIndex()]);
                     }
                 }
             }
@@ -63,6 +67,7 @@ namespace RPG.VisualNovel
             {
                 StoryScene storyScene = scene as StoryScene;
                 backgroundController.SwitchImage(storyScene.background);
+                PlayAudio(storyScene.sentences[0]);
                 yield return new WaitForSeconds(1f);
                 bottomBar.ClearText();
                 bottomBar.Show();
@@ -80,6 +85,11 @@ namespace RPG.VisualNovel
                 int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
                 SceneManager.LoadScene(currentSceneIndex + 1);
             }
+        }
+
+        private void PlayAudio(StoryScene.Sentence sentence)
+        {
+            audioController.PlayAudio(sentence.music, sentence.sound);
         }
     }
 }

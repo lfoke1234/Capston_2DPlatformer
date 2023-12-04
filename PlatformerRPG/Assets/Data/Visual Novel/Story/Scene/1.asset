@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   sentences:
-  - text: Humm... What should I do?
+  - text: 'Ok '
     speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
     actions:
     - speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
@@ -21,6 +21,8 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 400, y: 0}
       moveSpeed: 0
+    music: {fileID: 8300000, guid: 00d65c9608e470a43a9dc7d539347211, type: 3}
+    sound: {fileID: 0}
   - text: ....
     speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
     actions:
@@ -29,5 +31,7 @@ MonoBehaviour:
       actionType: 3
       coords: {x: 400, y: 0}
       moveSpeed: 0
-  background: {fileID: 21300000, guid: 7a192068ac277b840b9e0d8c3cb55d30, type: 3}
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: 011f90b5383e13f42b505d4eaf5404b8, type: 3}
   nextScene: {fileID: 11400000, guid: da10389fd3fb533439201cd1391d5004, type: 2}

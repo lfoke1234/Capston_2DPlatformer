@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   sentences:
-  - text: The weather is good.
+  - text: AAAA
     speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
     actions:
     - speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
@@ -21,22 +21,18 @@ MonoBehaviour:
       actionType: 1
       coords: {x: 400, y: 0}
       moveSpeed: 0
-  - text: take a walk
-    speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
-    actions:
-    - speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
-      spriteIndex: 0
-      actionType: 0
-      coords: {x: 400, y: 0}
-      moveSpeed: 0
-  - text: ........
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  - text: BB
     speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
     actions:
     - speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
       spriteIndex: 0
       actionType: 2
       coords: {x: 0, y: 0}
-      moveSpeed: 1
+      moveSpeed: 2
+    music: {fileID: 8300000, guid: df4f70e1053e6114a8e4ac12178f91aa, type: 3}
+    sound: {fileID: 0}
   - text: ........
     speaker: {fileID: 11400000, guid: 8d960552c86c720459d7e1cef3afb705, type: 2}
     actions:
@@ -44,6 +40,8 @@ MonoBehaviour:
       spriteIndex: 0
       actionType: 3
       coords: {x: 0, y: 0}
-      moveSpeed: 0
-  background: {fileID: 21300000, guid: 893615fe4ac1f0347b10aefea38af056, type: 3}
-  nextScene: {fileID: 11400000, guid: 1454a5dd14d9f81419b48f52f4882161, type: 2}
+      moveSpeed: 1
+    music: {fileID: 0}
+    sound: {fileID: 0}
+  background: {fileID: 21300000, guid: 19577ecb82a198a4292c96fc94fa1110, type: 3}
+  nextScene: {fileID: 0}

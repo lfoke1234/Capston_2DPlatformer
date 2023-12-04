@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   labels:
-  - text: Go walk
+  - text: A
     nextScene: {fileID: 11400000, guid: 08a71084587c9594a8a3e5f92a053b13, type: 2}
-  - text: Go cherch
-    nextScene: {fileID: 11400000, guid: 75b5ff993ce69a347a8159be21d4a274, type: 2}
-  - text: Do nothing
-    nextScene: {fileID: 11400000, guid: 1454a5dd14d9f81419b48f52f4882161, type: 2}
+  - text: B
+    nextScene: {fileID: 11400000, guid: 08a71084587c9594a8a3e5f92a053b13, type: 2}
+  - text: C
+    nextScene: {fileID: 11400000, guid: 08a71084587c9594a8a3e5f92a053b13, type: 2}
