@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class UI_InGame : MonoBehaviour
     [SerializeField] private Slider slider;
 
     [SerializeField] private Image dashImage;
+    [SerializeField] private TextMeshProUGUI[] quickSlotTexts;
 
     [SerializeField] private Image quickSlot1Base;
     [SerializeField] private Image quickSlot1;
@@ -70,15 +72,24 @@ public class UI_InGame : MonoBehaviour
         if (Inventory.Instance.usable != null && Inventory.Instance.usable.Count > slotIndex)
         {
             InventoryItem quickSlotItem = Inventory.Instance.usable[slotIndex];
-            if (quickSlotItem != null && quickSlotItem.data != null)
+            if (quickSlotItem != null && quickSlotItem.data != null && quickSlotItem.stackSize > 0)
             {
                 quickSlotImage.sprite = quickSlotItem.data.icon;
                 quickSlotImage.enabled = true;
+                quickSlotTexts[slotIndex].text = quickSlotItem.stackSize.ToString(); // 갯수를 표시합니다.
+                quickSlotTexts[slotIndex].enabled = true; // 텍스트를 활성화합니다.
             }
             else
             {
                 quickSlotImage.enabled = false;
+                quickSlotTexts[slotIndex].enabled = false; // 텍스트를 비활성화합니다.
             }
         }
+        else
+        {
+            quickSlotImage.enabled = false;
+            quickSlotTexts[slotIndex].enabled = false; // 텍스트를 비활성화합니다.
+        }
     }
+
 }
