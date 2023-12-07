@@ -76,8 +76,8 @@ public class UI_InGame : MonoBehaviour
             {
                 quickSlotImage.sprite = quickSlotItem.data.icon;
                 quickSlotImage.enabled = true;
-                quickSlotTexts[slotIndex].text = quickSlotItem.stackSize.ToString(); // 갯수를 표시합니다.
-                quickSlotTexts[slotIndex].enabled = true; // 텍스트를 활성화합니다.
+                quickSlotTexts[slotIndex].text = quickSlotItem.stackSize.ToString();
+                quickSlotTexts[slotIndex].enabled = true;
             }
             else
             {
