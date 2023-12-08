@@ -82,13 +82,13 @@ public class UI_InGame : MonoBehaviour
             else
             {
                 quickSlotImage.enabled = false;
-                quickSlotTexts[slotIndex].enabled = false; // 텍스트를 비활성화합니다.
+                quickSlotTexts[slotIndex].enabled = false;
             }
         }
         else
         {
             quickSlotImage.enabled = false;
-            quickSlotTexts[slotIndex].enabled = false; // 텍스트를 비활성화합니다.
+            quickSlotTexts[slotIndex].enabled = false;
         }
     }
 
