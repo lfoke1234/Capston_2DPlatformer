@@ -35,7 +35,7 @@ public class FileDataHandler
         }
         catch (System.Exception e)
         {
-            Debug.Log("Error on trying to save data to file" + fullPath + "\n" + e);
+            Debug.Log("Error on trying to save data to file: " + fullPath + "\n" + e);
             throw;
         }
     }

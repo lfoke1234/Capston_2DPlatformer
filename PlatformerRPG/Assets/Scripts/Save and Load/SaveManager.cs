@@ -42,7 +42,7 @@ public class SaveManager : MonoBehaviour
 
         if(this.gameData == null)
         {
-            Debug.Log("NO saved data found!");
+            Debug.Log("No saved data found!");
             NewGame();
         }
 

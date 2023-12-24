@@ -10,11 +10,14 @@ public class UI_InGame : MonoBehaviour
     [SerializeField] private Image dashImage;
     [SerializeField] private TextMeshProUGUI[] quickSlotTexts;
 
+    #region QuickSlot Image
     [SerializeField] private Image quickSlot1Base;
     [SerializeField] private Image quickSlot1;
     [SerializeField] private Image quickSlot2Base;
     [SerializeField] private Image quickSlot2;
+    #endregion
 
+    [SerializeField] private TextMeshProUGUI currentGold;
     private SkillManager skills;
 
     private void Start()
@@ -29,6 +32,8 @@ public class UI_InGame : MonoBehaviour
 
     private void Update()
     {
+        currentGold.text = PlayerManager.instance.GetCurrency().ToString("#,#");
+
         UpdateQuickSlotIcon(0, quickSlot1);
         UpdateQuickSlotIcon(0, quickSlot1Base);
 
