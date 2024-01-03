@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        SwitchTo(inGameUI);
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+            SwitchTo(inGameUI);
 
         itemTooltip.gameObject.SetActive(false);
         statTooltip.gameObject.SetActive(false);

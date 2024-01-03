@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: b
   icon: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9, type: 3}
   itemDescription: this is a heal item
+  itemID: 0421f174bed66b64f9065b4e5a748635
   dropChance: 100
   usableItemID: 2
   itemCooldown: 1
