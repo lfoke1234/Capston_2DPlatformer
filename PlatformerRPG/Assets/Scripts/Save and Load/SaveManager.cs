@@ -32,6 +32,8 @@ public class SaveManager : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this);
+
         dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         saveManagers = FindAllSaveManagers();
 

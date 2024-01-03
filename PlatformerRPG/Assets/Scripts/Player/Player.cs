@@ -75,6 +75,8 @@ public class Player : Entity
         catchSword = new PlayerCatchSwordState(this, stateMachine, "CatchSword");
 
         deadState = new PlayerDeadState(this, stateMachine, "Die");
+        
+        DontDestroyOnLoad(this);
     }
 
     protected override void Start()

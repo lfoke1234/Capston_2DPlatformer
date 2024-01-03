@@ -16,6 +16,8 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this);
+
         if (SceneManager.GetActiveScene().buildIndex != 0)
             SwitchTo(inGameUI);
 

@@ -10,6 +10,14 @@ public class Inventory : MonoBehaviour, ISaveManager
 {
     public static Inventory Instance;
 
+    #region EquipmentItem
+    public ItemData_Equipment level1Sword;
+    public ItemData_Equipment level2Sword;
+    public ItemData_Equipment level1Armor;
+    public ItemData_Equipment level1Shoose;
+    public ItemData_Equipment level1Gloves;
+    #endregion
+
     public List<ItemData> startingItems;
     public List<ItemData> startEquipItemData;
 
@@ -54,7 +62,10 @@ public class Inventory : MonoBehaviour, ISaveManager
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(this);
+        }
         else
             Destroy(gameObject);
     }
@@ -139,7 +150,7 @@ public class Inventory : MonoBehaviour, ISaveManager
         if (oldEquipment != null)
         {
             UnequipItem(oldEquipment);
-            AddItem(oldEquipment);
+            RemoveItem(oldEquipment);
         }
 
         equipment.Add(newItem);
@@ -181,6 +192,35 @@ public class Inventory : MonoBehaviour, ISaveManager
         RemoveItem(_item);
         UpdateSlotUI();
     }
+
+    #region EquipItem
+
+    public void EquipLevel1Sword()
+    {
+        EquipItem(level1Sword);
+    }
+
+    public void EquipLevel1Gloves()
+    {
+        EquipItem(level1Gloves);
+    }
+
+    public void EquipLevel1Shoose()
+    {
+        EquipItem(level1Shoose);
+    }
+
+    public void EquipLevel1Armor()
+    {
+        EquipItem(level1Armor);
+    }
+
+    public void EquipLevel2Sword()
+    {
+        EquipItem(level2Sword);
+    }
+
+    #endregion
 
     public void AddItemWithStack(ItemData _item, int stackSizeToAdd)
     {
@@ -402,6 +442,8 @@ public class Inventory : MonoBehaviour, ISaveManager
         Debug.Log("Success Craft Item : " + _itemToCreaft.name);
         return true;
     }
+
+    
 
     public List<InventoryItem> GetEquipmentList() => equipment;
 

@@ -1833,7 +1833,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 102470662}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336985098}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AA
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &102470662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3422,7 +3434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 233178301}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369250677}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &233178301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4765,7 +4789,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300646371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369250678}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: EquipLevel1Gloves
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300646371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4999,7 +5035,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 308344125}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369250678}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: EquipLevel1Sword
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &308344125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6036,6 +6084,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c764ca9a3ac2a42bc385ec87550334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1Sword: {fileID: 11400000, guid: dbf7ab7b1742a37469a05034f3c74662, type: 2}
+  level2Sword: {fileID: 11400000, guid: 3262cf7dae0fe8d4e9d3c9bdd6420eec, type: 2}
+  level1Armor: {fileID: 11400000, guid: fd0c43e93459b5f4996d9147d1420340, type: 2}
+  level1Shoose: {fileID: 11400000, guid: f7452c36185542b43bda6d4aaa0e53de, type: 2}
+  level1Gloves: {fileID: 11400000, guid: f72f2d211c78f2947b38efc2736687f8, type: 2}
   startingItems: []
   startEquipItemData: []
   equipment: []
@@ -6226,7 +6279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 393037645}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369250678}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: EquipLevel2Sword
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &393037645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6276,7 +6341,7 @@ GameObject:
   - component: {fileID: 397036684}
   - component: {fileID: 397036685}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: EquipmentLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7555,7 +7620,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 505649191}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369250678}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: EquipLevel1Shoose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &505649191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8505,7 +8582,7 @@ GameObject:
   - component: {fileID: 585677558}
   - component: {fileID: 585677559}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: EquipmentLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8569,7 +8646,7 @@ GameObject:
   - component: {fileID: 618483142}
   - component: {fileID: 618483143}
   m_Layer: 5
-  m_Name: GameObject (3)
+  m_Name: EquipmentLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11267,7 +11344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 772911380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369250677}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &772911380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15868,7 +15957,7 @@ GameObject:
   - component: {fileID: 1125338260}
   - component: {fileID: 1125338261}
   m_Layer: 5
-  m_Name: GameObject (2)
+  m_Name: EquipmentLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20054,6 +20143,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330591591}
   m_CullTransparentMesh: 1
+--- !u!1 &1336985097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336985099}
+  - component: {fileID: 1336985098}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1336985098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336985097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc21f09c211696489aea2cdb44160e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1336985099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336985097}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 910.85785, y: 519.5914, z: 10.9728565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1340478474
 GameObject:
   m_ObjectHideFlags: 0
@@ -23001,7 +23134,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1489502666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 369250678}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: EquipLevel1Armor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1489502666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29846,7 +29991,7 @@ GameObject:
   - component: {fileID: 2090683061}
   - component: {fileID: 2090683060}
   m_Layer: 5
-  m_Name: Boots
+  m_Name: Shoose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30496,3 +30641,4 @@ SceneRoots:
   - {fileID: 525269689}
   - {fileID: 1166188638}
   - {fileID: 369250679}
+  - {fileID: 1336985099}
